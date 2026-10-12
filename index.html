@@ -1,0 +1,253 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tasnim Khalil — Data Science & AI Engineer</title>
+<meta name="description" content="Portfolio de Tasnim Khalil, ingénieure Data Science & Intelligence Artificielle : machine learning, deep learning, MLOps, LLMs.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0f1733; --bg2:#1E2749; --panel:#182145; --panel2:#1b2550;
+  --line:rgba(143,180,255,.14); --text:#e8edff; --muted:#9db0e0;
+  --blue:#2563EB; --blue2:#5b8cff; --cyan:#17C3B2; --amber:#FDB12A;
+  --radius:16px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Manrope',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;
+  background-image:radial-gradient(900px 500px at 85% -5%, rgba(37,99,235,.18), transparent 55%),
+                   radial-gradient(700px 500px at -5% 20%, rgba(23,195,178,.10), transparent 55%);}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+.mono{font-family:'JetBrains Mono',monospace}
+
+/* NAV */
+nav{position:sticky;top:0;z-index:20;backdrop-filter:blur(10px);
+  background:rgba(15,23,51,.72);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.brand{font-weight:800;letter-spacing:.3px}
+.brand span{color:var(--cyan)}
+.navlinks{display:flex;gap:26px}
+.navlinks a{color:var(--muted);font-size:14px;font-weight:600}
+.navlinks a:hover{color:var(--text)}
+@media(max-width:640px){.navlinks{display:none}}
+
+/* HERO */
+.hero{position:relative;padding:88px 0 64px;overflow:hidden}
+.hero .grid-bg{position:absolute;inset:0;opacity:.5;
+  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
+  background-size:46px 46px;mask-image:linear-gradient(180deg,#000,transparent 85%)}
+.hero .inner{position:relative;display:grid;grid-template-columns:1.4fr .9fr;gap:30px;align-items:center}
+@media(max-width:760px){.hero .inner{grid-template-columns:1fr}.hero .net{display:none}}
+.tagline{font-family:'JetBrains Mono',monospace;color:var(--cyan);font-size:14px;margin-bottom:14px}
+h1{font-size:50px;font-weight:800;line-height:1.08;letter-spacing:-.5px}
+h1 .accent{background:linear-gradient(90deg,var(--blue2),var(--cyan));-webkit-background-clip:text;background-clip:text;color:transparent}
+.sub{color:var(--muted);font-size:19px;margin-top:16px;max-width:560px}
+.cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 18px;border-radius:999px;font-weight:700;font-size:14px;
+  border:1px solid var(--line);color:var(--text);transition:.15s;background:rgba(255,255,255,.02)}
+.btn:hover{transform:translateY(-2px);border-color:var(--blue2)}
+.btn.primary{background:linear-gradient(90deg,var(--blue),#1e55d6);border-color:transparent}
+.btn.primary:hover{box-shadow:0 8px 24px rgba(37,99,235,.35)}
+.net{justify-self:center}
+
+/* SECTION */
+section{padding:56px 0;border-top:1px solid var(--line)}
+.kicker{font-family:'JetBrains Mono',monospace;color:var(--cyan);font-size:13px;letter-spacing:.5px}
+h2{font-size:28px;font-weight:800;margin:6px 0 24px}
+p.lead{color:var(--muted);font-size:17px;max-width:760px}
+
+/* SKILLS */
+.skills{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+@media(max-width:640px){.skills{grid-template-columns:1fr}}
+.skillcard{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
+.skillcard h3{font-size:15px;color:var(--blue2);margin-bottom:10px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{font-family:'JetBrains Mono',monospace;font-size:12.5px;color:#d7e3ff;border:1px solid var(--line);
+  border-radius:999px;padding:5px 11px;background:rgba(37,99,235,.08)}
+
+/* PROJECTS */
+.projects{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
+@media(max-width:760px){.projects{grid-template-columns:1fr}}
+.card{background:linear-gradient(180deg,var(--panel),var(--panel2));border:1px solid var(--line);
+  border-radius:var(--radius);padding:24px;display:flex;flex-direction:column;transition:.18s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-4px);border-color:rgba(91,140,255,.4)}
+.card.flag{grid-column:1/-1;background:linear-gradient(120deg,#16224d,#1a2a5e)}
+.card .top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px}
+.badge{font-family:'JetBrains Mono',monospace;font-size:11px;padding:4px 10px;border-radius:999px;
+  background:rgba(23,195,178,.14);color:var(--cyan);border:1px solid rgba(23,195,178,.3)}
+.badge.flagb{background:rgba(253,177,42,.14);color:var(--amber);border-color:rgba(253,177,42,.3)}
+.card h3{font-size:20px;font-weight:800}
+.card p{color:var(--muted);font-size:14.5px;margin-top:8px;flex:1}
+.stack{display:flex;flex-wrap:wrap;gap:7px;margin-top:14px}
+.stack .t{font-family:'JetBrains Mono',monospace;font-size:11.5px;color:#cdddff;opacity:.9;
+  border:1px solid var(--line);border-radius:6px;padding:3px 8px}
+.links{display:flex;gap:14px;margin-top:16px}
+.links a{font-size:13px;font-weight:700;color:var(--blue2)}
+.links a:hover{color:var(--cyan)}
+.links .disabled{color:var(--muted);opacity:.6;cursor:default}
+
+/* EXPERIENCE / EDU */
+.timeline{display:flex;flex-direction:column;gap:18px}
+.row{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:18px 20px}
+.row .h{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+.row .role{font-weight:700}
+.row .date{font-family:'JetBrains Mono',monospace;color:var(--muted);font-size:13px}
+.row .org{color:var(--blue2);font-size:14px;margin-top:2px}
+.row ul{margin:10px 0 0 18px;color:var(--muted);font-size:14.5px}
+
+/* CONTACT */
+.contact{text-align:center}
+.contact h2{margin-bottom:10px}
+.contact .cta{justify-content:center}
+footer{padding:30px 0;text-align:center;color:var(--muted);font-size:13px;border-top:1px solid var(--line)}
+</style>
+</head>
+<body>
+
+<nav><div class="wrap">
+  <div class="brand">Tasnim<span>.</span>Khalil</div>
+  <div class="navlinks">
+    <a href="#about">À propos</a>
+    <a href="#skills">Compétences</a>
+    <a href="#projects">Projets</a>
+    <a href="#experience">Parcours</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div></nav>
+
+<!-- HERO -->
+<header class="hero"><div class="wrap">
+  <div class="grid-bg"></div>
+  <div class="inner">
+    <div>
+      <div class="tagline">&lt;/&gt; Data Science &amp; AI Engineer</div>
+      <h1>Je transforme la donnée en <span class="accent">décisions intelligentes</span>.</h1>
+      <p class="sub">Ingénieure en Data Science diplômée de l'ESPRIT, spécialisée en machine learning, deep learning et MLOps — de la modélisation jusqu'à la mise en production.</p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">Voir mes projets</a>
+        <a class="btn" href="https://www.linkedin.com/in/tasnim-khalil-789859255/" target="_blank" rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://github.com/TasnimKhalil" target="_blank" rel="noopener">GitHub</a>
+        <!-- Ajoute ton CV : place CV_Tasnim_Khalil.pdf à la racine du repo puis décommente -->
+        <!-- <a class="btn" href="CV_Tasnim_Khalil.pdf" target="_blank">CV (PDF)</a> -->
+      </div>
+    </div>
+    <svg class="net" width="300" height="260" viewBox="0 0 300 260" aria-hidden="true">
+      <g stroke="rgba(143,180,255,.3)" stroke-width="1.1">
+        <line x1="30" y1="50" x2="150" y2="35"/><line x1="30" y1="50" x2="150" y2="130"/>
+        <line x1="30" y1="130" x2="150" y2="35"/><line x1="30" y1="130" x2="150" y2="130"/>
+        <line x1="30" y1="130" x2="150" y2="225"/><line x1="30" y1="210" x2="150" y2="130"/>
+        <line x1="30" y1="210" x2="150" y2="225"/>
+        <line x1="150" y1="35" x2="270" y2="90"/><line x1="150" y1="130" x2="270" y2="90"/>
+        <line x1="150" y1="130" x2="270" y2="180"/><line x1="150" y1="225" x2="270" y2="180"/>
+      </g>
+      <g>
+        <circle cx="30" cy="50" r="6" fill="#2563EB"/><circle cx="30" cy="130" r="6" fill="#2563EB"/><circle cx="30" cy="210" r="6" fill="#2563EB"/>
+        <circle cx="150" cy="35" r="7" fill="#17C3B2"/><circle cx="150" cy="130" r="7" fill="#17C3B2"/><circle cx="150" cy="225" r="7" fill="#17C3B2"/>
+        <circle cx="270" cy="90" r="8" fill="#FDB12A"/><circle cx="270" cy="180" r="8" fill="#FDB12A"/>
+      </g>
+    </svg>
+  </div>
+</div></header>
+
+<!-- ABOUT -->
+<section id="about"><div class="wrap">
+  <div class="kicker">01 — À propos</div>
+  <h2>Qui je suis</h2>
+  <p class="lead">Passionnée par la conception de solutions d'intelligence artificielle qui répondent à des problèmes concrets. À travers des expériences en banque, en industrie et en SaaS, j'ai appris à couvrir toute la chaîne de la donnée : préparation, modélisation, explicabilité et déploiement. J'accorde une attention particulière à la rigueur méthodologique et à des modèles explicables, utilisables en production — pas seulement en notebook.</p>
+</div></section>
+
+<!-- SKILLS -->
+<section id="skills"><div class="wrap">
+  <div class="kicker">02 — Compétences</div>
+  <h2>Ma boîte à outils</h2>
+  <div class="skills">
+    <div class="skillcard"><h3>Machine Learning &amp; Deep Learning</h3>
+      <div class="chips"><span class="chip">Scikit-learn</span><span class="chip">PyTorch</span><span class="chip">TensorFlow</span><span class="chip">CNN</span><span class="chip">Transformers</span><span class="chip">Analyse de survie</span></div></div>
+    <div class="skillcard"><h3>NLP &amp; LLMs</h3>
+      <div class="chips"><span class="chip">Hugging Face</span><span class="chip">BERT</span><span class="chip">GPT</span><span class="chip">Mistral</span><span class="chip">QLoRA</span><span class="chip">RAG</span><span class="chip">Embeddings</span></div></div>
+    <div class="skillcard"><h3>MLOps &amp; DevOps</h3>
+      <div class="chips"><span class="chip">Docker</span><span class="chip">Kubernetes</span><span class="chip">MLflow</span><span class="chip">FastAPI</span><span class="chip">CI/CD</span><span class="chip">Git</span></div></div>
+    <div class="skillcard"><h3>Data &amp; Langages</h3>
+      <div class="chips"><span class="chip">Python</span><span class="chip">SQL</span><span class="chip">Pandas</span><span class="chip">NumPy</span><span class="chip">SHAP</span><span class="chip">PostgreSQL</span><span class="chip">Power BI</span></div></div>
+  </div>
+</div></section>
+
+<!-- PROJECTS -->
+<section id="projects"><div class="wrap">
+  <div class="kicker">03 — Projets</div>
+  <h2>Ce que j'ai construit</h2>
+  <div class="projects">
+
+    <article class="card flag">
+      <div class="top"><h3>Elafy — CRM SaaS augmenté par l'IA</h3><span class="badge flagb">Projet de fin d'études</span></div>
+      <p>Plateforme CRM multi-tenant que j'ai conçue et développée de bout en bout, enrichie de cinq modules d'intelligence artificielle : scoring de leads et prédiction d'attrition (analyse de survie), prédiction de closing (risques concurrents), génération d'emails par un LLM affiné (Mistral 7B, QLoRA) et recommandation d'actions explicable (SHAP). Architecture microservices sécurisée et mise en production.</p>
+      <div class="stack"><span class="t">Python</span><span class="t">FastAPI</span><span class="t">PyTorch</span><span class="t">Mistral/QLoRA</span><span class="t">Docker</span><span class="t">PostgreSQL</span><span class="t">Redis</span><span class="t">MongoDB</span></div>
+      <div class="links"><span class="disabled">Code privé (confidentiel)</span></div>
+    </article>
+
+    <article class="card">
+      <div class="top"><h3>IVF Response Prediction</h3><span class="badge">Santé · ML</span></div>
+      <p>Pipeline ML médical complet pour l'aide à la décision en FIV (89 % de précision) : extraction de données depuis PDF, modèle explicable (SHAP/LIME) et déploiement via API + interface Streamlit.</p>
+      <div class="stack"><span class="t">Python</span><span class="t">FastAPI</span><span class="t">Random Forest</span><span class="t">SHAP</span><span class="t">Streamlit</span></div>
+      <div class="links"><a href="https://github.com/tasnimkh24/IVF-Response-Prediction-Khalil-Tasnim" target="_blank" rel="noopener">GitHub →</a></div>
+    </article>
+
+    <article class="card">
+      <div class="top"><h3>Classification vocale</h3><span class="badge">Deep Learning</span></div>
+      <p>Conversion de signaux audio en spectrogrammes et classification par ResNet. Gain de +15 % de précision grâce à l'augmentation de données temporelles.</p>
+      <div class="stack"><span class="t">PyTorch</span><span class="t">Librosa</span><span class="t">ResNet</span><span class="t">Computer Vision</span></div>
+      <div class="links"><a class="repl" href="https://github.com/TasnimKhalil" target="_blank" rel="noopener">GitHub →</a></div>
+    </article>
+
+    <article class="card">
+      <div class="top"><h3>MarketMind</h3><span class="badge">NLP · LLMs</span></div>
+      <p>Analyse de sentiments et représentations sémantiques (BERT/GPT), pipeline multimodal et recommandations basées sur les embeddings.</p>
+      <div class="stack"><span class="t">Hugging Face</span><span class="t">NLP</span><span class="t">LLMs</span><span class="t">RAG</span></div>
+      <div class="links"><a class="repl" href="https://github.com/tasnimkh24/nlp_project" target="_blank" rel="noopener">GitHub →</a></div>
+    </article>
+
+    <article class="card">
+      <div class="top"><h3>Prédiction de churn client — MLOps</h3><span class="badge">MLOps</span></div>
+      <p>Architecture MLOps complète de bout en bout : versioning des modèles, monitoring et intégration/déploiement continus.</p>
+      <div class="stack"><span class="t">MLflow</span><span class="t">Docker</span><span class="t">FastAPI</span><span class="t">Jenkins</span></div>
+      <div class="links"><a class="repl" href="https://github.com/TasnimKhalil" target="_blank" rel="noopener">GitHub →</a></div>
+    </article>
+
+  </div>
+</div></section>
+
+<!-- EXPERIENCE -->
+<section id="experience"><div class="wrap">
+  <div class="kicker">04 — Parcours</div>
+  <h2>Expérience &amp; formation</h2>
+  <div class="timeline">
+    <div class="row"><div class="h"><div><div class="role">Ingénieure Data Science — Projet de fin d'études</div><div class="org">VSIA Services</div></div><div class="date">Fév – Août 2026</div></div>
+      <ul><li>Conception et développement d'Elafy et de ses cinq modules d'IA.</li><li>Analyse de survie, affinage de LLM (QLoRA) et recommandation explicable.</li></ul></div>
+    <div class="row"><div class="h"><div><div class="role">Stage Data Science &amp; Automatisation</div><div class="org">BIAT — Banque Internationale Arabe de Tunisie</div></div><div class="date">Juin – Août 2025</div></div>
+      <ul><li>Extraction automatisée de données depuis des PDF (OCR + Python).</li><li>Modèles de segmentation et d'analyse comportementale.</li></ul></div>
+    <div class="row"><div class="h"><div><div class="role">Analyste de données</div><div class="org">Compagnie des Phosphates de Gafsa (CPG)</div></div><div class="date">Juin – Juil. 2024</div></div>
+      <ul><li>Modèles prédictifs pour l'optimisation de processus industriels.</li></ul></div>
+    <div class="row"><div class="h"><div><div class="role">Diplôme National d'Ingénieur en Informatique — Data Science</div><div class="org">ESPRIT, Tunis · échange à l'Université Laval (Québec), 2025</div></div><div class="date">2021 – 2026</div></div></div>
+  </div>
+</div></section>
+
+<!-- CONTACT -->
+<section id="contact"><div class="wrap contact">
+  <div class="kicker">05 — Contact</div>
+  <h2>Travaillons ensemble</h2>
+  <p class="lead" style="margin:0 auto">À l'écoute d'opportunités en Data Science et en Intelligence Artificielle.</p>
+  <div class="cta">
+    <a class="btn primary" href="mailto:tasnimkhelil24@gmail.com">Me contacter</a>
+    <a class="btn" href="https://www.linkedin.com/in/tasnim-khalil-789859255/" target="_blank" rel="noopener">LinkedIn</a>
+    <a class="btn" href="https://github.com/TasnimKhalil" target="_blank" rel="noopener">GitHub</a>
+  </div>
+</div></section>
+
+<footer><div class="wrap">© 2026 Tasnim Khalil — Data Science &amp; AI Engineer</div></footer>
+
+</body>
+</html>
